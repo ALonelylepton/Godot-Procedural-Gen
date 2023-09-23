@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cof0owhhgb3py" path="res://Textures/water.png" id="2_jipaw"]
 [ext_resource type="PackedScene" uid="uid://bll20e2uo08n0" path="res://character_body_2d.tscn" id="3_urwxa"]
 [ext_resource type="Texture2D" uid="uid://c2i3uppjluun6" path="res://Fort1.png" id="4_6mv47"]
-[ext_resource type="PackedScene" uid="uid://c63oeogqfydgr" path="res://Castle.tscn" id="6_jemiw"]
+[ext_resource type="PackedScene" uid="uid://c63oeogqfydgr" path="res://castle.tscn" id="6_jemiw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k1mly"]
 resource_name = "Grass"
