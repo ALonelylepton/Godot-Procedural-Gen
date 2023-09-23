@@ -1,0 +1,52 @@
+[gd_scene load_steps=11 format=3 uid="uid://2oo8sfrse20b"]
+
+[ext_resource type="Texture2D" uid="uid://dihmq8k0mhv75" path="res://Textures/grass.png" id="1_k21er"]
+[ext_resource type="Script" path="res://TileMap.gd" id="2_6sewn"]
+[ext_resource type="Texture2D" uid="uid://cof0owhhgb3py" path="res://Textures/water.png" id="2_jipaw"]
+[ext_resource type="PackedScene" uid="uid://bll20e2uo08n0" path="res://character_body_2d.tscn" id="3_urwxa"]
+[ext_resource type="Texture2D" uid="uid://c2i3uppjluun6" path="res://Fort1.png" id="4_6mv47"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k1mly"]
+resource_name = "Grass"
+texture = ExtResource("1_k21er")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p0wkw"]
+resource_name = "Water"
+texture = ExtResource("2_jipaw")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_raayl"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_k1mly")
+sources/1 = SubResource("TileSetAtlasSource_p0wkw")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v6cjl"]
+texture = ExtResource("4_6mv47")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_b0y1o"]
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_v6cjl")
+
+[node name="Main" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_raayl")
+format = 2
+script = ExtResource("2_6sewn")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_urwxa")]
+
+[node name="Buildings" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_b0y1o")
+format = 2
